@@ -168,6 +168,8 @@ The costmap generation uses a weighted combination of terrain features:
 cost = slope_weight * slope_cost + roughness_weight * roughness_cost + elevation_weight * elevation_cost
 ```
 
+<img src="media/assets/costmap.png" alt="Costmap Example" width="750">
+
 ### Filtering
 
 - **Gaussian Filter**: Smooths terrain features
