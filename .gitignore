@@ -1,0 +1,56 @@
+# Build directories
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Backup files
+*.backup
+*.bak
+*~
+
+# Old/alternative files (keep commented for reference)
+# media/heightmaps/mars_complex_terrain.png
+# media/heightmaps/mars_heightmap_fixed.png
+# media/heightmaps/mars_heightmap_original.png
+# worlds/complex_mountainous_mars.world
+# worlds/realistic_mars_terrain.world
+# worlds/simple_mars_terrain.world
+# worlds/mars_terrain.world
+# worlds/complex_mars_terrain.world
+# launch/advanced_simulation.launch.py
+# launch/complete_simulation.launch.py
+# launch/grid_map_simulation.launch.py
+# launch/gridmap_costmap.launch.py
+# launch/simple_simulation.launch.py
+# launch/simulation.launch.py
+# launch/test_costmap.launch.py
+# launch/simple_mountainous_simulation.launch.py
+# launch/complex_mountainous_simulation.launch.py
+# config/advanced_terrain_params.yaml
+# config/gridmap_costmap_params.yaml
+# config/simulation.rviz
+# config/grid_map_simulation.rviz
+# config/advanced_simulation.rviz

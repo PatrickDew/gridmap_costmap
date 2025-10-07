@@ -1,0 +1,60 @@
+# Optimized Parameters for Smooth Mars Terrain
+
+gridmap_costmap_converter:
+  ros__parameters:
+    # General parameters
+    use_sim_time: true
+    
+    # Map parameters - Optimized for smooth terrain
+    resolution: 0.15
+    map_width: 400.0
+    map_height: 400.0
+    map_frame: "map"
+    robot_frame: "base_link"
+    
+    # Grid map layers
+    elevation_layer: "elevation"
+    slope_layer: "slope"
+    roughness_layer: "roughness"
+    costmap_layer: "traversability"
+    
+    # Optimized terrain analysis parameters for smooth terrain
+    max_slope: 0.6          # Allow moderate slopes (35 degrees)
+    max_roughness: 0.4      # Moderate roughness tolerance
+    min_elevation: -3.0      # Lower minimum elevation
+    max_elevation: 12.0      # Higher maximum elevation for mountains
+    
+    # Balanced cost calculation weights for smooth terrain
+    slope_weight: 0.4        # Moderate slope weight
+    roughness_weight: 0.3    # Moderate roughness weight
+    elevation_weight: 0.3    # Balanced elevation weight
+    
+    # Enhanced filtering parameters for smooth terrain
+    gaussian_sigma: 1.5     # Moderate Gaussian filter
+    kernel_size: 3           # Standard kernel size
+    median_kernel_size: 3    # Standard median filter
+    morphological_kernel_size: 3  # Standard morphological filter
+    
+    # Optimized costmap parameters for smooth terrain
+    inflation_radius: 0.4    # Moderate inflation radius
+    free_threshold: 0        # Free space threshold
+    occupied_threshold: 70  # Lower occupied threshold for smoother terrain
+    max_cost: 80           # Lower maximum cost for smoother navigation
+    
+    # Publishing parameters
+    publish_rate: 8.0       # Moderate publishing rate
+    enable_markers: true     # Enable terrain markers
+    enable_processed_grid_map: true  # Enable processed grid map publishing
+    
+    # Sensor processing parameters
+    pointcloud_voxel_size: 0.15
+    pointcloud_max_range: 60.0
+    pointcloud_min_range: 0.1
+    laser_max_range: 60.0
+    laser_min_range: 0.1
+    
+    # Frame parameters
+    lidar_frame: "velodyne"
+    camera_frame: "camera_link"
+    robot_frame: "base_link"
+    map_frame: "map"

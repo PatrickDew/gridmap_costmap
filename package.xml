@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>gridmap_costmap</name>
+  <version>1.0.0</version>
+  <description>ROS2 package for converting grid maps from Gazebo simulation into costmaps for navigation</description>
+  
+  <maintainer email="your.email@example.com">Your Name</maintainer>
+  <license>BSD-3-Clause</license>
+  
+  <url type="website">https://github.com/ANYbotics/grid_map</url>
+  <url type="bugtracker">https://github.com/ANYbotics/grid_map/issues</url>
+  <url type="repository">https://github.com/ANYbotics/grid_map</url>
+  
+  <author>Your Name</author>
+  
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <depend>rclcpp</depend>
+  <depend>rclcpp_components</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>grid_map_msgs</depend>
+  <depend>grid_map_core</depend>
+  <depend>grid_map_ros</depend>
+  <depend>grid_map_cv</depend>
+  <depend>grid_map_costmap_2d</depend>
+  <depend>grid_map_filters</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>opencv2</depend>
+  <depend>pcl_ros</depend>
+  <depend>pcl_conversions</depend>
+  
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
