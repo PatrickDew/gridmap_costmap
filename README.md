@@ -1,15 +1,15 @@
-# Grid Map Costmap Converter
+# Grid Map Costmap Converter - Mars Rover Navigation
 
-A ROS2 package for converting grid maps from Gazebo simulation into costmaps for navigation. This package is particularly useful for Mars rover navigation to avoid rough terrain and obstacles.
+A ROS2 package for converting grid maps from Gazebo simulation into costmaps for Mars rover navigation. This package provides smooth terrain analysis and realistic sensor integration for autonomous Mars rover missions.
 
-<!-- ## Features
+## 🌟 Features
 
-- **Grid Map to Costmap Conversion**: Converts elevation grid maps to navigation costmaps
-- **Terrain Analysis**: Calculates slope, roughness, and traversability metrics
-- **Costmap Generation**: Creates both occupancy grids and 2D costmaps
-- **Gazebo Integration**: Works with Gazebo simulation environments
-- **RViz Visualization**: Real-time visualization of terrain and costmaps
-- **Configurable Parameters**: Customizable terrain analysis and cost calculation -->
+- **Smooth Mars Terrain**: Natural mountainous terrain with rolling hills, craters, and valleys
+- **Realistic LiDAR**: Velodyne VLP-16 style sensor with 16 vertical channels
+- **Advanced Terrain Analysis**: Slope, roughness, and elevation analysis
+- **Costmap Generation**: Navigation costmaps with terrain-aware path planning
+- **Sensor Integration**: Camera, LiDAR, and IMU data fusion
+- **Gazebo Integration**: Realistic Mars simulation environment
 
 ## Dependencies
 
@@ -94,6 +94,25 @@ Launch with custom parameters:
 ros2 launch gridmap_costmap gridmap_costmap.launch.py config_file:=config/custom_params.yaml
 ``` -->
 
+## 📁 Package Structure
+
+```
+gridmap_costmap/
+├── launch/
+│   └── smooth_mars_simulation.launch.py    # Main launch file
+├── config/
+│   └── smooth_terrain_params.yaml          # Optimized parameters
+├── worlds/
+│   └── smooth_mars_terrain.world          # Mars terrain world
+├── media/
+│   ├── heightmaps/
+│   │   └── mars_smooth_terrain.png         # Smooth terrain heightmap
+│   └── materials/textures/                # Mars surface textures
+├── src/                                    # Source code
+├── include/                                # Header files
+└── CMakeLists.txt                          # Build configuration
+```
+
 #### Topics
 
 **Subscribed Topics:**
@@ -155,7 +174,7 @@ cost = slope_weight * slope_cost + roughness_weight * roughness_cost + elevation
 - **Median Filter**: Removes noise
 - **Morphological Filter**: Closes small gaps
 
-## Examples
+<!-- ## Examples
 
 ### Mars Rover Navigation
 
@@ -168,9 +187,9 @@ ros2 launch gridmap_costmap gridmap_costmap.launch.py
 
 # Visualize in RViz
 ros2 run rviz2 rviz2 -d config/simulation.rviz
-```
+``` -->
 
-### Custom Terrain
+<!-- ### Custom Terrain
 
 1. Create a custom Gazebo world file
 2. Configure terrain parameters
@@ -191,15 +210,15 @@ ros2 run rviz2 rviz2 -d config/simulation.rviz
 
 3. **Grid Map Issues:**
    - Verify grid map topic names
-   - Check layer names in configuration
+   - Check layer names in configuration -->
 
-### Debug Mode
+<!-- ### Debug Mode
 
 Enable debug logging:
 
 ```bash
 ros2 run gridmap_costmap gridmap_costmap_node --ros-args --log-level debug
-```
+``` -->
 
 <!-- ## Contributing
 
